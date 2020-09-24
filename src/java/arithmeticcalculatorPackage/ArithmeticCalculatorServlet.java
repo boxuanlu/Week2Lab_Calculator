@@ -55,7 +55,7 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
                 request.setAttribute("second", second);
                 getServletContext().getRequestDispatcher("/WEB-INF/arithmeticcalculator.jsp").forward(request, response);
             }else if(cal.equals("%")){
-                int total = firstinput / secondinput;
+                int total = firstinput % secondinput;
                 String message = " " + total;
                 request.setAttribute("message", message);
                 request.setAttribute("first", first);
